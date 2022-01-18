@@ -1,4 +1,4 @@
 module.exports = {
-    publicPath: '/<repository_name>',
+    publicPath: '/dingdong-mini-desktop',
     outputDir: 'docs',
 };
