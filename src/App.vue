@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div id="page-title">띵동업무 간단 데스크탑</div>
+
     <div id="hikorea-container">
       <iframe
         id="hikorea-web-page"
@@ -64,6 +65,10 @@
       </div>
     </div>
     <!-- <router-view /> -->
+    <br />
+    <a href="https://github.com/Potato-Y/dingdong-mini-desktop"
+      >사용된 오픈소스 확인하기</a
+    >
   </div>
 </template>
 
