@@ -10,60 +10,11 @@
         >page load faild</iframe
       >
       <div id="months-table">
-        <table border="1">
-          <tr>
-            <td>JAN</td>
-            <td>1월</td>
-          </tr>
-          <tr>
-            <td>FEB</td>
-            <td>2월</td>
-          </tr>
-          <tr>
-            <td>MAR</td>
-            <td>3월</td>
-          </tr>
-          <tr>
-            <td>APR</td>
-            <td>4월</td>
-          </tr>
-          <tr>
-            <td>MAY</td>
-            <td>5월</td>
-          </tr>
-
-          <tr>
-            <td>JUN</td>
-            <td>6월</td>
-          </tr>
-
-          <tr>
-            <td>JUL</td>
-            <td>7월</td>
-          </tr>
-          <tr>
-            <td>AUG</td>
-            <td>8월</td>
-          </tr>
-          <tr>
-            <td>SEP</td>
-            <td>9월</td>
-          </tr>
-          <tr>
-            <td>OCT</td>
-            <td>10월</td>
-          </tr>
-          <tr>
-            <td>NOV</td>
-            <td>11월</td>
-          </tr>
-          <tr>
-            <td>DEC</td>
-            <td>12월</td>
-          </tr>
-        </table>
+        <MonthsTable />
+        <!-- 달력표 -->
       </div>
     </div>
+
     <!-- <router-view /> -->
     <br />
     <a href="https://github.com/Potato-Y/dingdong-mini-desktop"
@@ -71,6 +22,17 @@
     >
   </div>
 </template>
+
+<script>
+import MonthsTable from "./components/layout/MonthsTable.vue"; // 달력표 가져오기
+
+export default {
+  name: "app",
+  components: {
+    MonthsTable,
+  },
+};
+</script>
 
 <style>
 /* 배달의 민족 도현체 */
