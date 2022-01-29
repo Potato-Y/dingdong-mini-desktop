@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-  &nbsp;ⓒ 2022. Potato-Y all rights reserved.
+  <div style="float: left">ⓒ 2022. Potato-Y all rights reserved.</div>
 </template>
 
 <script>
