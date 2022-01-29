@@ -1,54 +1,66 @@
 <template>
   <table border="1">
     <tr>
-      <td>JAN</td>
-      <td>1월</td>
+      <td class="en">JAN</td>
+      <td class="kr">1월</td>
     </tr>
     <tr>
-      <td>FEB</td>
-      <td>2월</td>
+      <td class="en">FEB</td>
+      <td class="kr">2월</td>
     </tr>
     <tr>
-      <td>MAR</td>
-      <td>3월</td>
+      <td class="en">MAR</td>
+      <td class="kr">3월</td>
     </tr>
     <tr>
-      <td>APR</td>
-      <td>4월</td>
+      <td class="en">APR</td>
+      <td class="kr">4월</td>
     </tr>
     <tr>
-      <td>MAY</td>
-      <td>5월</td>
-    </tr>
-
-    <tr>
-      <td>JUN</td>
-      <td>6월</td>
-    </tr>
-
-    <tr>
-      <td>JUL</td>
-      <td>7월</td>
+      <td class="en">MAY</td>
+      <td class="kr">5월</td>
     </tr>
     <tr>
-      <td>AUG</td>
-      <td>8월</td>
+      <td class="en">JUN</td>
+      <td class="kr">6월</td>
     </tr>
     <tr>
-      <td>SEP</td>
-      <td>9월</td>
+      <td class="en">JUL</td>
+      <td class="kr">7월</td>
     </tr>
     <tr>
-      <td>OCT</td>
-      <td>10월</td>
+      <td class="en">AUG</td>
+      <td class="kr">8월</td>
     </tr>
     <tr>
-      <td>NOV</td>
-      <td>11월</td>
+      <td class="en">SEP</td>
+      <td class="kr">9월</td>
     </tr>
     <tr>
-      <td>DEC</td>
-      <td>12월</td>
+      <td class="en">OCT</td>
+      <td class="kr">10월</td>
+    </tr>
+    <tr>
+      <td class="en">NOV</td>
+      <td class="kr">11월</td>
+    </tr>
+    <tr>
+      <td class="en">DEC</td>
+      <td class="kr">12월</td>
     </tr>
   </table>
 </template>
+
+<style>
+table {
+  background-color: white;
+}
+
+.en {
+  text-align: left;
+}
+
+.kr {
+  text-align: right;
+}
+</style>
