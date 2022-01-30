@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div id="title-bar" style="z-index: 1">
+      ⓒ 2022. Potato-Y all rights reserved.
       <div>
         <router-link id="title-text" class="router-link-text" to="/"
           >띵동업무 간단 데스크탑</router-link
@@ -31,7 +32,6 @@
       </div>
     </div>
   </div>
-  <div style="float: left">ⓒ 2022. Potato-Y all rights reserved.</div>
 </template>
 
 <script>
