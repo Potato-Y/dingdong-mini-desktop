@@ -25,10 +25,10 @@
 }
 
 #router-content {
-  float: right;
-  width: 10px;
+  float: left;
+  width: 620px;
 }
 
 #copy-rights {
-  float: right;
+  float: left;
 }
