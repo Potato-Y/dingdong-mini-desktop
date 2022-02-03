@@ -4,6 +4,9 @@
 
     <!-- width 고정크기 설정 -->
     <div style="width: 1200px">
+      <div style="float: left" ref="hi_korea_Lookup_page_content">
+        <HiKoreaLookupPageContent />
+      </div>
       <!-- 콘텐츠 영역 -->
       <div
         id="router-content"
@@ -13,12 +16,9 @@
       >
         <router-view />
       </div>
-      <div style="float: left" ref="hi_korea_Lookup_page_content">
-        <HiKoreaLookupPageContent />
-      </div>
+      <div id="copy-rights">ⓒ 2022. Potato-Y all rights reserved.</div>
     </div>
   </div>
-  <div id="copy-rights">ⓒ 2022. Potato-Y all rights reserved.</div>
 </template>
 
 <script>
@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       hiKoreaLookupPageContentWidth: 0,
+      show: false,
     };
   },
   methods: {

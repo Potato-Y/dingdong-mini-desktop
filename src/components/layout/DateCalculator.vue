@@ -89,12 +89,13 @@ export default {
         year.toString() + month.toString() + date.toString();
 
       // 계산기에 기본으로 계산할 날짜 부여
-      this.cal1 = 90;
-      this.cal2 = 20;
-      this.cal3 = 90;
+      this.cal1 = 90; // 기본 90일
+      this.cal2 = 14; // 14일 이내 신고가 필요한 건 날짜
+      this.cal3 = 90; // 기본 90일
 
       this.selectedDate = this.krDate; // 선택 날짜 객체에도 한국 날짜 추가
 
+      // 계산 메소드 호출
       const tempValue = { target: { value: this.selectedDateUserTextBox } };
       this.inputSelectDate(tempValue);
     },
@@ -128,6 +129,7 @@ export default {
             (1000 * 60 * 60 * 24)
         );
 
+        // 입력한 날짜에 따라 0일이 나오지 않도록
         if (calValue >= -1) {
           calValue += 2;
         } else {
@@ -144,6 +146,7 @@ export default {
     },
 
     calDateToFormat() {
+      // 포맷에 맞게 날짜를 반환
       const year = this.selectedDate.getFullYear();
       const month = ("00" + (this.selectedDate.getMonth() + 1)).slice(-2);
       const date = ("00" + this.selectedDate.getDate()).slice(-2);
