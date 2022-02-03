@@ -2,7 +2,7 @@
   <div id="title-bar" style="z-index: 1" ref="title_bar">
     <div>
       <router-link id="title-text" class="router-link-text" to="/"
-        >띵동업무 간단 데스크탑</router-link
+        >띵동 업무 간단 데스크탑</router-link
       >
     </div>
     <div id="title-bar-menu">

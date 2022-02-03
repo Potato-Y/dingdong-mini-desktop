@@ -47,7 +47,7 @@ export default {
       this.nowTimeMin = ("00" + krDate.getMinutes()).slice(-2);
       this.nowTimeSec = ("00" + krDate.getSeconds()).slice(-2);
 
-      setTimeout(this.timeUpdate, 1000);
+      setTimeout(this.timeUpdate, 3000);
     },
     getDay(day) {
       switch (day) {

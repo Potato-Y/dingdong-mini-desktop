@@ -57,6 +57,10 @@
     은 <input type="text" style="width: 80px" v-model="calResult3" readonly />
     입니다. (오늘 미포함)
   </p>
+  <br />
+  오늘 기준 만 70세는
+  <span style="font-weight: bold">{{ dateOfBirth }}</span> 이전(포함)의 출생일을
+  가진 사람입니다.
 </template>
 
 <script>
@@ -74,6 +78,7 @@ export default {
       calResult1: "",
       calResult2: "",
       calResult3: "",
+      dateOfBirth: "",
     };
   },
   methods: {
@@ -98,6 +103,17 @@ export default {
       // 계산 메소드 호출
       const tempValue = { target: { value: this.selectedDateUserTextBox } };
       this.inputSelectDate(tempValue);
+      this.dateOfBirthCalculator();
+    },
+
+    dateOfBirthCalculator() {
+      // 만나이 계산기
+      const year = this.krDate.getFullYear();
+      const month = ("00" + (this.krDate.getMonth() + 1)).slice(-2);
+      const date = ("00" + this.krDate.getDate()).slice(-2);
+
+      this.dateOfBirth =
+        (year - 70).toString() + "-" + month.toString() + "-" + date.toString();
     },
 
     resetDate() {

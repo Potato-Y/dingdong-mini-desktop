@@ -9,7 +9,6 @@
         <router-view />
         <div id="copy-rights">ⓒ 2022. Potato-Y all rights reserved.</div>
       </div>
-
       <div style="float: left" ref="hi_korea_Lookup_page_content">
         <HiKoreaLookupPageContent />
       </div>
