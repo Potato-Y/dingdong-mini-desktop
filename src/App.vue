@@ -1,20 +1,6 @@
 <template>
   <div id="app">
-    <div id="title-bar" style="z-index: 1">
-      ⓒ 2022. Potato-Y all rights reserved.
-      <div>
-        <router-link id="title-text" class="router-link-text" to="/"
-          >띵동업무 간단 데스크탑</router-link
-        >
-      </div>
-      <div>
-        <router-link class="router-link-text" to="/About" style="float: right"
-          >About</router-link
-        >
-      </div>
-    </div>
-    <!-- 타이틀과 분리 -->
-    <div style="height: 52px"></div>
+    <TitleBar />
 
     <!-- width 고정크기 설정 -->
     <div style="width: 1200px">
@@ -27,14 +13,16 @@
       >
         <router-view />
       </div>
-      <div style="float: right" ref="hi_korea_Lookup_page_content">
+      <div style="float: left" ref="hi_korea_Lookup_page_content">
         <HiKoreaLookupPageContent />
       </div>
     </div>
   </div>
+  <div id="copy-rights">ⓒ 2022. Potato-Y all rights reserved.</div>
 </template>
 
 <script>
+import TitleBar from "./components/layout/TitleBar.vue";
 import HiKoreaLookupPageContent from "./components/layout/HiKoreaLookupPageContent.vue";
 export default {
   name: "app",
@@ -53,6 +41,7 @@ export default {
     this.GetiKoreaLookupPageContentWidth();
   },
   components: {
+    TitleBar,
     HiKoreaLookupPageContent,
   },
 };

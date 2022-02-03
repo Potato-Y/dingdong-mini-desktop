@@ -11,6 +11,7 @@
     />
     <button @click="reset">초기화</button><br />
     {{ saveSelectedDate }} 로부터 오늘은 {{ referenceDateDifference }} 일째예요!
+    (오늘 미포함)
   </p>
   <br />
   <p>
@@ -26,7 +27,7 @@
     />
     은
     <input type="text" style="width: 80px" v-model="calResult1" readonly />
-    입니다!
+    입니다.
   </p>
   <p>
     <!-- 2 번째 계산기 -->
@@ -40,7 +41,7 @@
       maxlength="5"
     />
     은 <input type="text" style="width: 80px" v-model="calResult2" readonly />
-    입니다!
+    입니다.
   </p>
   <p>
     <!-- 3 번째 계산기 -->
@@ -54,7 +55,7 @@
       maxlength="5"
     />
     은 <input type="text" style="width: 80px" v-model="calResult3" readonly />
-    입니다!
+    입니다. (오늘 미포함)
   </p>
 </template>
 
@@ -192,7 +193,7 @@ export default {
       if (isNaN(inputValue)) return;
       if (inputValue == "") return;
       this.selectedDate.setDate(
-        this.selectedDate.getDate() + Number(inputValue) - 1
+        this.selectedDate.getDate() + Number(inputValue)
       );
 
       // 결괏값 저장하기
@@ -200,7 +201,7 @@ export default {
 
       // 다시 더해서 selectedDate를 원래대로 돌려두기.
       this.selectedDate.setDate(
-        this.selectedDate.getDate() - Number(inputValue) + 1
+        this.selectedDate.getDate() - Number(inputValue)
       );
     },
 
