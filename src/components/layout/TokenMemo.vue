@@ -3,70 +3,45 @@
     *단순 메모*<br />
     (본 메모는 단순히 수동으로 카운터를 올리는 메모 역할입니다.)
   </p>
-  <br />
-  1000 :
-  <input
-    type="text"
-    class="token-value"
+  <it-number-input
+    min="1000"
+    max="2000"
+    style="width: 35px; text-align: center"
     v-model="token1000"
-    oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-    maxlength="4"
     readonly
-  />
-  <button class="add-minus-button" @click="token1000--">-</button>
-  <button class="add-minus-button" @click="token1000++">+</button>
+  ></it-number-input>
 
-  <br />
-  2000 :
-  <input
-    type="text"
-    class="token-value"
+  <it-number-input
+    min="2000"
+    max="3000"
+    style="width: 35px; text-align: center"
     v-model="token2000"
-    oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-    maxlength="4"
     readonly
-  />
-  <button class="add-minus-button" @click="token2000--">-</button>
-  <button class="add-minus-button" @click="token2000++">+</button>
+  ></it-number-input>
 
-  <br />
-  3000 :
-  <input
-    type="text"
-    class="token-value"
+  <it-number-input
+    min="3000"
+    max="4000"
+    style="width: 35px; text-align: center"
     v-model="token3000"
-    oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-    maxlength="4"
     readonly
-  />
-  <button class="add-minus-button" @click="token3000--">-</button>
-  <button class="add-minus-button" @click="token3000++">+</button>
+  ></it-number-input>
 
-  <br />
-  4000 :
-  <input
-    type="text"
-    class="token-value"
+  <it-number-input
+    min="4000"
+    max="5000"
+    style="width: 35px; text-align: center"
     v-model="token4000"
-    oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-    maxlength="4"
     readonly
-  />
-  <button class="add-minus-button" @click="token4000--">-</button>
-  <button class="add-minus-button" @click="token4000++">+</button>
+  ></it-number-input>
 
-  <br />
-  5000 :
-  <input
-    type="text"
-    class="token-value"
+  <it-number-input
+    min="5000"
+    max="6000"
+    style="width: 35px; text-align: center"
     v-model="token5000"
-    oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-    maxlength="4"
     readonly
-  />
-  <button class="add-minus-button" @click="token5000--">-</button>
-  <button class="add-minus-button" @click="token5000++">+</button>
+  ></it-number-input>
 </template>
 
 <script>
@@ -84,14 +59,4 @@ export default {
 };
 </script>
 
-<style>
-.add-minus-button {
-  margin-left: 5px;
-  width: 30px;
-}
-
-.token-value {
-  width: 40px;
-  text-align: center;
-}
-</style>
+<style></style>

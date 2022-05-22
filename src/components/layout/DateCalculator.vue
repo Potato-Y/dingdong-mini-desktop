@@ -1,62 +1,95 @@
 <template>
-  <p>
+  <div>
     * 기준 날짜를 입력하세요!
-    <input
-      type="text"
-      v-model="selectedDateUserTextBox"
-      oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-      style="width: 80px"
-      @input="inputSelectDate($event)"
-      maxlength="8"
-    />
-    <button @click="reset">초기화</button><br />
-    {{ saveSelectedDate }} 로부터 오늘은 {{ referenceDateDifference }} 일째예요!
-    (오늘 미포함)
-  </p>
+    <div class="it-input-box" style="width: 100px">
+      <it-input
+        type="text"
+        v-model="selectedDateUserTextBox"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+        @input="inputSelectDate($event)"
+        maxlength="8"
+        style="text-align: center"
+      />
+    </div>
+    <div style="display: inline-block">
+      <it-button @click="reset">초기화</it-button>
+    </div>
+  </div>
+
+  {{ saveSelectedDate }} 로부터 오늘은 {{ referenceDateDifference }} 일째예요!
+  (오늘 미포함)
+
   <br />
-  <p>
-    <!-- 1 번째 계산기 -->
-    D -&nbsp;
-    <input
+  <!-- 1 번째 계산기 -->
+  D <span class="font-container">-</span>
+  <div class="it-input-box input-d-day">
+    <it-input
       type="text"
       v-model="cal1"
       @input="inputCal1($event)"
       oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-      style="width: 40px"
+      style="text-align: center"
       maxlength="5"
     />
-    은
-    <input type="text" style="width: 80px" v-model="calResult1" readonly />
-    입니다.
-  </p>
-  <p>
-    <!-- 2 번째 계산기 -->
-    D -&nbsp;
-    <input
+  </div>
+  은
+  <div class="it-input-box input-result" style="width: 100px">
+    <it-input
+      style="text-align: center"
+      type="text"
+      v-model="calResult1"
+      readonly
+    />
+  </div>
+  입니다.
+  <br />
+  <!-- 2 번째 계산기 -->
+  D <span class="font-container">-</span>
+  <div class="it-input-box input-d-day">
+    <it-input
       type="text"
       v-model="cal2"
       oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-      style="width: 40px"
+      style="text-align: center"
       @input="inputCal2($event)"
       maxlength="5"
     />
-    은 <input type="text" style="width: 80px" v-model="calResult2" readonly />
-    입니다.
-  </p>
-  <p>
-    <!-- 3 번째 계산기 -->
-    D +
-    <input
+  </div>
+
+  은
+  <div class="it-input-box input-result">
+    <it-input
+      type="text"
+      style="text-align: center"
+      v-model="calResult2"
+      readonly
+    />
+  </div>
+  입니다.
+  <br />
+  <!-- 3 번째 계산기 -->
+  D <span class="font-container">+</span>
+  <div class="it-input-box input-d-day">
+    <it-input
       type="text"
       v-model="cal3"
       oninput="this.value = this.value.replace(/[^0-9]/g, '');"
-      style="width: 40px"
+      style="text-align: center"
       @input="inputCal3($event)"
       maxlength="5"
     />
-    은 <input type="text" style="width: 80px" v-model="calResult3" readonly />
-    입니다. (오늘 미포함)
-  </p>
+  </div>
+
+  은
+  <div class="it-input-box input-result">
+    <it-input
+      type="text"
+      style="text-align: center"
+      v-model="calResult3"
+      readonly
+    />
+  </div>
+  입니다. (오늘 미포함)
   <br />
   오늘 기준 만 70세는
   <span style="font-weight: bold">{{ dateOfBirth }}</span> 이전(포함)의 출생일을
@@ -246,3 +279,26 @@ export default {
   },
 };
 </script>
+
+<style>
+.font-container {
+  /* + - 간격을 같게 하기 위해 */
+  font-family: "Nanum Gothic Coding" !important;
+}
+.it-input-box {
+  display: inline-block;
+  margin: 5px;
+}
+
+.input-d-day {
+  display: inline-block;
+  margin: 5px;
+  width: 50px;
+}
+
+.input-result {
+  display: inline-block;
+  margin: 5px;
+  width: 100px;
+}
+</style>

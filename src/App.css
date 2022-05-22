@@ -12,6 +12,12 @@
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+
+.nanumgothiccoding * {
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
 /* 페이지 전체에 적용할 내용 */
 * {
   margin: 0;
